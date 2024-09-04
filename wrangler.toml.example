@@ -1,0 +1,8 @@
+name = "yoyaku-oss"
+pages_build_output_dir = "./dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "db"
+database_id = "id"
+migrations_dir = "migrations"

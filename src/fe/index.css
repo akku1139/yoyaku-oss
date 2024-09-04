@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-900 text-slate-200 min-h-screen max-w-3xl mx-auto text-lg leading-relaxed;
+}
+
+#root {
+  @apply min-h-screen p-6 bg-top bg-no-repeat bg-cover;
+}
+
+button, input, optgroup, select, textarea {
+  background-color: inherit;
+}
+
+option {
+  @apply bg-slate-900
+}

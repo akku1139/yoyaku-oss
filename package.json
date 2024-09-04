@@ -1,0 +1,35 @@
+{
+  "name": "yoyaku",
+  "type": "module",
+  "private": "true",
+  "scripts": {
+    "build": "rm -rf dist; tsx ./build.ts",
+    "preview": "wrangler pages dev dist",
+    "generate": "drizzle-kit generate",
+    "migrate": "wrangler d1 migrations apply db --remote",
+    "deploy": "npm run build && wrangler pages deploy dist"
+  },
+  "dependencies": {
+    "@hono/valibot-validator": "^0.3.0",
+    "@solidjs/router": "^0.14.3",
+    "autoprefixer": "^10.4.20",
+    "drizzle-kit": "^0.24.2",
+    "drizzle-orm": "^0.33.0",
+    "hono": "^4.5.9",
+    "postcss": "^8.4.41",
+    "solid-js": "^1.8.22",
+    "tailwindcss": "^3.4.10",
+    "valibot": "^0.40.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240821.1",
+    "esbuild": "^0.23.1",
+    "esbuild-plugin-copy": "^2.1.1",
+    "esbuild-plugin-solid": "^0.6.0",
+    "esbuild-postcss": "^0.0.4",
+    "tiny-glob": "^0.2.9",
+    "tsx": "^4.19.0",
+    "typescript": "^5.3.3",
+    "wrangler": "^3.72.3"
+  }
+}
